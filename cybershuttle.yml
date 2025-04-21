@@ -1,23 +1,27 @@
 project:
   name: "Malicious URL Detector"
-  version: 0.1
   description: "Detect malicious URLs using machine learning models"
+  homepage: https://github.com/airavata-courses/malicious-url-detector
+  authors:
+    - Krish Katariya
+    - Jesse Gong
+    - Shreyas Arisa
+    - Devin Fromond
   tags:
     - airavata-courses
-  homepage: https://github.com/airavata-courses/malicious-url-detector
 
 workspace:
   location: /workspace
   resources:
     min_cpu: 4
     min_gpu: 0
-    gpu_mem: 1024
     min_mem: 4096
-  data_collection: 
+    gpu_mem: 1024
+  model_collection: []
+  data_collection:
     - source: cybershuttle
       identifier: airavata-courses-malicious-url-detector
       mount_point: /cybershuttle_data/airavata-courses-malicious-url-detector
-  model_collection: []
 
 additional_dependencies:
   conda:
